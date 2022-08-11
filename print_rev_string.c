@@ -1,19 +1,22 @@
 #include "main.h"
 
 /**
- * print_integer - Print a number in base 10
- * @list: Number to print in base 10
+ * print_rev_string - Print a string in reverse
+ * @list: List of arguments
  *
- * Return: Length of th numbers in decimal
+ * Return: Length of the string
  **/
-int print_integer(va_list list)
+int  print_rev_string(va_list list)
 {
-	char *p_buff;
-	int size;
+	int i, size;
+	const char *str;
 
-	p_buff = integerToAscii(va_arg(list, int), 10);
+	str = va_arg(list, const char *);
 
-	size = print((p_buff != NULL) ? p_buff : "NULL");
+	size = _strlen(str);
+
+	for (i = size - 1; i >= 0; i--)
+		_putchar(str[i]);
 
 	return (size);
 }
