@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * printhex - prints a hexadecimal
+ * printfhex - prints a hexadecimal
  * @format: format to print hexadecimal
  * @pa: list that contains the hexadecimal
  * Return: number.
